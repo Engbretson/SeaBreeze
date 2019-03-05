@@ -1,0 +1,4 @@
+file "SeaBreezeSpec_settings.req",        P=$(P),  R=cam1:
+file "NDStdArrays_settings.req",  P=$(P),  R=image1:
+#file "EXAMPLE_commonPlugin_settings.req", P=$(P)
+file "commonPlugin_settings.req", P=$(P)
