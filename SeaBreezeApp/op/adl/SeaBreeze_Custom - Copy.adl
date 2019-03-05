@@ -1,0 +1,661 @@
+
+file {
+	name="Z:\epics\synApps_6_0\support\areaDetector-R3-4\ADSeaBreeze\SeaBreezeApp\op\adl\SeaBreeze_Custom.adl"
+	version=030109
+}
+display {
+	object {
+		x=878
+		y=274
+		width=400
+		height=346
+	}
+	clr=14
+	bclr=4
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=0
+		y=5
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Hardware Revision"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=130
+		y=5
+		width=107
+		height=20
+	}
+	control {
+		chan="$(P)$(R)HardwareRevision"
+		clr=14
+		bclr=4
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=272
+		y=5
+		width=112
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)HardwareRevision_RBV"
+		clr=14
+		bclr=4
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=0
+		y=30
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Shutter Available"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=130
+		y=31
+		width=107
+		height=20
+	}
+	control {
+		chan="$(P)$(R)HardwareRevision"
+		clr=14
+		bclr=4
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=271
+		y=31
+		width=112
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)ShutterAvailable_RBV"
+		clr=14
+		bclr=4
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=0
+		y=55
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Light Source Available"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=130
+		y=57
+		width=107
+		height=20
+	}
+	control {
+		chan="$(P)$(R)HardwareRevision"
+		clr=14
+		bclr=4
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=270
+		y=57
+		width=112
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)LightSourceAvailable_RBV"
+		clr=14
+		bclr=4
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=0
+		y=83
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Lamp Available"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=130
+		y=83
+		width=107
+		height=20
+	}
+	control {
+		chan="$(P)$(R)HardwareRevision"
+		clr=14
+		bclr=4
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=266
+		y=83
+		width=112
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)LampAvailable_RBV"
+		clr=14
+		bclr=4
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=0
+		y=110
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Acquisition Delay Available"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=130
+		y=110
+		width=107
+		height=20
+	}
+	control {
+		chan="$(P)$(R)HardwareRevision"
+		clr=14
+		bclr=4
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=265
+		y=110
+		width=112
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)AcquisitionDelayAvailable_RBV"
+		clr=14
+		bclr=4
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=0
+		y=135
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Temperature Available"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=130
+		y=135
+		width=107
+		height=20
+	}
+	control {
+		chan="$(P)$(R)HardwareRevision"
+		clr=14
+		bclr=4
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=265
+		y=135
+		width=112
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)TemperatureAvailable_RBV"
+		clr=14
+		bclr=4
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=0
+		y=165
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Lamp Enable"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=130
+		y=165
+		width=107
+		height=20
+	}
+	control {
+		chan="$(P)$(R)HardwareRevision"
+		clr=14
+		bclr=4
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=266
+		y=165
+		width=112
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)LampEnable"
+		clr=14
+		bclr=4
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=0
+		y=190
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Minimum Integration Time"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=130
+		y=190
+		width=107
+		height=20
+	}
+	control {
+		chan="$(P)$(R)HardwareRevision"
+		clr=14
+		bclr=4
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=264
+		y=190
+		width=112
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)MinimumIntegrationTime_RBV"
+		clr=14
+		bclr=4
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=1
+		y=216
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Integration Time"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=131
+		y=216
+		width=107
+		height=20
+	}
+	control {
+		chan="$(P)$(R)HardwareRevision"
+		clr=14
+		bclr=4
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=266
+		y=216
+		width=112
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)IntegrationTime_RBV"
+		clr=14
+		bclr=4
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=1
+		y=241
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Use Formated Spectrum"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=131
+		y=241
+		width=107
+		height=20
+	}
+	control {
+		chan="$(P)$(R)HardwareRevision"
+		clr=14
+		bclr=4
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=266
+		y=241
+		width=112
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)UseFormatedSpectrum_RBV"
+		clr=14
+		bclr=4
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=1
+		y=271
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Formated Spectrum Size"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=131
+		y=271
+		width=107
+		height=20
+	}
+	control {
+		chan="$(P)$(R)HardwareRevision"
+		clr=14
+		bclr=4
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=267
+		y=271
+		width=112
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)Formated SpectrumSize_RBV"
+		clr=14
+		bclr=4
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=1
+		y=297
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Unformated Spectrum Size"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=131
+		y=296
+		width=107
+		height=20
+	}
+	control {
+		chan="$(P)$(R)HardwareRevision"
+		clr=14
+		bclr=4
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=265
+		y=296
+		width=112
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)UnformatedSpectrumSize_RBV"
+		clr=14
+		bclr=4
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=0
+		y=322
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Max Intensity"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=130
+		y=321
+		width=107
+		height=20
+	}
+	control {
+		chan="$(P)$(R)HardwareRevision"
+		clr=14
+		bclr=4
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=264
+		y=321
+		width=112
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)MaxIntensity_RBV"
+		clr=14
+		bclr=4
+	}
+	align="horiz. right"
+	limits {
+	}
+}
