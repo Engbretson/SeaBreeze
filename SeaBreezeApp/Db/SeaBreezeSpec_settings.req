@@ -1,0 +1,6 @@
+$(P)$(R)LampEnable
+$(P)$(R)IntegrationTime
+$(P)$(R)UseFormatedSpectrum
+$(P)$(R)NumImages
+$(P)$(R)ImageMode
+

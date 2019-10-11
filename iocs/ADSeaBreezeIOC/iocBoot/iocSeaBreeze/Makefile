@@ -5,5 +5,5 @@ include $(TOP)/configure/CONFIG
 ARCH = windows-x64-static
 #ARCH = windows-x64-debug
 #ARCH = linux-x86
-TARGETS = envPaths
+TARGETS = envPaths cdCommands dllPath.bat
 include $(TOP)/configure/RULES.ioc

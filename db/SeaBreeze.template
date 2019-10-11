@@ -1,0 +1,144 @@
+record(stringin, $(P)$(R)HardwareRevision_RBV)
+{
+    field (DESC, "Hardware revision of the device")
+    field (DTYP, asynOctetRead)
+    field (INP, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_HARDWAREREVISION")
+    field (PINI, "YES")
+}
+
+record(ai, $(P)$(R)ShutterAvailable_RBV)
+{
+    field (DESC, "Has the device a shutter")
+    field (DTYP, asynInt32)
+    field (INP, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_HASSHUTTER")
+    field (PINI, "YES")
+}
+
+record(ai, $(P)$(R)LightSourceAvailable_RBV)
+{
+    field (DESC, "Has the device a light source")
+    field (DTYP, asynInt32)
+    field (INP, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_HASLIGHTSOURCE")
+    field (PINI, "YES")
+}
+
+record(ai, $(P)$(R)LampAvailable_RBV)
+{
+    field (DESC, "Has the devive a lamp")
+    field (DTYP, asynInt32)
+    field (INP, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_HASLAMP")
+    field (PINI, "YES")
+}
+
+record(ai, $(P)$(R)AcquisitionDelayAvailable_RBV)
+{
+    field (DESC, "Can the device do acquisition delay")
+    field (DTYP, asynInt32)
+    field (INP, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_HASACQISITIONDELAY")
+    field (PINI, "YES")
+}
+
+record(ai, $(P)$(R)TemperatureAvailable_RBV)
+{
+    field (DESC, "Has the device a temperature sensor")
+    field (DTYP, asynInt32)
+    field (INP, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_HASTEMPERATURE")
+    field (PINI, "YES")
+}
+
+record(ai, $(P)$(R)LampEnable_RBV)
+{
+    field (DESC, "Status of lamp enable")
+    field (DTYP, asynInt32)
+    field (INP, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_ENABLELAMP")
+    field (SCAN, "5 second")
+}
+
+record(ao, $(P)$(R)LampEnable)
+{
+    field (DESC, "Enable/disable the lamp")
+    field (DTYP, asynInt32)
+    field (OUT, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_ENABLELAMP")
+    field (FLNK, "$(P)$(R):LampEnable_RBV.PROC")
+}
+
+record(ai, $(P)$(R)MinimumIntegrationTime_RBV)
+{
+    field (DESC, "Minimum integration time of device")
+    field (DTYP, asynFloat64)
+    field (INP, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_MINIMUMINTEGRATIONTIME")
+    field (EGU, "µs")
+    field (PINI, "YES")
+}
+
+record(ai, $(P)$(R)IntegrationTime_RBV)
+{
+    field (DESC, "Integration time")
+    field (DTYP, asynFloat64)
+    field (INP, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_INTEGRATIONTIME")
+    field (EGU, "µs")
+    field (PINI, "YES")
+    field (SCAN, "5 second")
+}
+
+record(ao, $(P)$(R)IntegrationTime)
+{
+    field (DESC, "Integration time")
+    field (DTYP, asynFloat64)
+    field (OUT, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_INTEGRATIONTIME")
+    field (EGU, "µs")
+    field (FLNK, "$(P)$(R):IntegrationTime.PROC")
+}
+
+record(ai, $(P)$(R)UseFormatedSpectrum_RBV)
+{
+    field (DESC, "Use formated or unformated spectrum")
+    field (DTYP, asynInt32)
+    field (INP, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_USEFORMATEDSPECTRUM")
+    field (PINI, "YES")
+    field (SCAN, "5 second")
+}
+
+record(ao, $(P)$(R)UseFormatedSpectrum)
+{
+    field (DESC, "Use formated or unformated spectrum")
+    field (DTYP, asynInt32)
+    field (OUT, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_USEFORMATEDSPECTRUM")
+    field (FLNK, "$(P)$(R):UseFormatedSpectrum_RBV.PROC")
+}
+
+record(ai, $(P)$(R)FormatedSpectrumSize_RBV)
+{
+    field (DESC, "Size of formated spectrum")
+    field (DTYP, asynInt32)
+    field (INP, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_FORMATEDSPECTRUMSIZE")
+    field (PINI, "YES")
+}
+
+record(ai, $(P)$(R)UnformatedSpectrumSize_RBV)
+{
+    field (DESC, "Unformated spectrum size")
+    field (DTYP, asynInt32)
+    field (INP, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_RAWSPECTRUMSIZE")
+    field (PINI, "YES")
+}
+
+record(ai, $(P)$(R)MaxIntensity_RBV)
+{
+    field (DESC, "Maximum intensity in spectrum")
+    field (DTYP, asynFloat64)
+    field (INP, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_MAXINTENSITY")
+    field (PINI, "YES")
+}
+
+record(waveform, $(P)$(R)WaveLengthArray_RBV)
+{
+    field (DESC, "Array of wavelength per bin")
+    field (DTYP, "asynFloat64ArrayIn")
+    field (INP, "@asyn($(PORT), $(ADDR), $(TIMEOUT)) SB_WAVELENGTH")
+    field (NELM, "4000")
+    field (FTVL, "DOUBLE")
+    field (PINI, "YES")
+}
+
+

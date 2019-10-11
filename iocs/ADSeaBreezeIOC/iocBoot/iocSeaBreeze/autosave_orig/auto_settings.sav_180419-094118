@@ -1,0 +1,18 @@
+# autosave R5.3	Automatically generated - DO NOT MODIFY - 180419-093858
+HIBEF:XFEL:image1:NDArrayPort SeaBreeze1
+HIBEF:XFEL:image1:NDArrayAddress 0
+HIBEF:XFEL:image1:EnableCallbacks 0
+HIBEF:XFEL:image1:MinCallbackTime 0
+HIBEF:XFEL:image1:BlockingCallbacks 0
+HIBEF:XFEL:image1:QueueSize 3
+HIBEF:XFEL:image1:NumThreads 1
+HIBEF:XFEL:image1:SortTime 0.1
+HIBEF:XFEL:image1:SortMode 0
+HIBEF:XFEL:image1:SortSize 20
+HIBEF:XFEL:image1:DataType 0
+HIBEF:XFEL:image1:ColorMode 0
+HIBEF:XFEL:image1:ArrayCallbacks 0
+HIBEF:XFEL:image1:NDAttributesFile 
+HIBEF:XFEL:image1:NDAttributesMacros 
+HIBEF:XFEL:image1:PoolUsedMem.SCAN 6
+<END>

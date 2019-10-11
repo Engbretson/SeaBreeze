@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.17763.0
+Release|x64|Z:\epics\synApps_6_0\support\areaDetector-R3-4\ADSeaBreeze\vendor\SeaBreeze-3.0.11\os-support\windows\VisualStudio2017\|
